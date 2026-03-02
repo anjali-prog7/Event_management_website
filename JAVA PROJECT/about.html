@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | College Event Management</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3); /* fresh modern gradient */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .about-section {
+      padding: 80px 20px;
+    }
+
+    .about-box {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+      padding: 50px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .about-title {
+      text-align: center;
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-text {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 50px;
+      font-size: 1.15rem;
+      color: #444;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    }
+
+    .feature-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+      color: #2575fc;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-box">
+        <h2 class="about-title">About Our College Fest 🎉</h2>
+        <p class="about-text">
+          Welcome to our annual <strong>College Event Management</strong> platform where innovation meets celebration!  
+          Our fest unites students, faculty, and guests in a joyful experience filled with <em>tech challenges, cultural vibes, sports tournaments, workshops, and fun-filled evenings</em>.  
+          With smooth registrations and live updates, we make sure every participant creates memories for a lifetime. 🌟
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">💻</div>
+              <h5>Technical Events</h5>
+              <p>Hackathons, coding contests, AI challenges, and robotics competitions to ignite young minds.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">🎶</div>
+              <h5>Cultural Fest</h5>
+              <p>Dance, music concerts, drama, and fashion shows showcasing talent & creativity.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">⚽</div>
+              <h5>Sports & Games</h5>
+              <p>Cricket, football, basketball, e-sports tournaments & indoor games for all enthusiasts.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">🎤</div>
+              <h5>Workshops & Talks</h5>
+              <p>Expert sessions, career guidance, and motivational talks by industry leaders.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">🎭</div>
+              <h5>Fun & Informals</h5>
+              <p>Treasure hunts, open mic nights, talent shows, and stand-up comedy for endless fun.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">🎇</div>
+              <h5>Star Nights</h5>
+              <p>DJ nights, celebrity performances, and gala evenings to end the fest with a bang!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

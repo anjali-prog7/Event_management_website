@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Schedule | College Fest</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Peaceful background */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d9f4ff, #fdfbfb);
+      background-attachment: fixed;
+      min-height: 100vh;
+      padding: 50px 0;
+    }
+
+    /* Section heading */
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    /* Event Card */
+    .event-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .event-time {
+      font-weight: bold;
+      color: #2575fc;
+    }
+
+    .event-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #222;
+    }
+
+    .event-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Subtle divider */
+    .day-divider {
+      text-align: center;
+      margin: 50px 0 30px;
+      font-weight: 700;
+      color: #444;
+      font-size: 1.5rem;
+      position: relative;
+    }
+
+    .day-divider::before,
+    .day-divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 2px;
+      background: #ccc;
+    }
+
+    .day-divider::before { left: 0; }
+    .day-divider::after { right: 0; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📅 Event Schedule</h1>
+
+    <!-- Day 1 -->
+    <div class="day-divider">Day 1 – Inauguration</div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">09:00 AM - 10:00 AM</div>
+          <div class="event-title">Opening Ceremony</div>
+          <p class="event-desc">Kick-off the college fest with lamp lighting, welcome speeches, and cultural performance.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">10:30 AM - 12:00 PM</div>
+          <div class="event-title">Technical Talk</div>
+          <p class="event-desc">Expert session on the future of AI and technology in modern education.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">01:00 PM - 03:00 PM</div>
+          <div class="event-title">Coding Contest</div>
+          <p class="event-desc">Competitive coding challenge where participants solve real-world problems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-divider">Day 2 – Cultural Fest</div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">09:00 AM - 11:00 AM</div>
+          <div class="event-title">Art & Poster Exhibition</div>
+          <p class="event-desc">Display of creative art, posters, and models by students of different departments.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">12:00 PM - 02:00 PM</div>
+          <div class="event-title">Dance Competition</div>
+          <p class="event-desc">Exciting group and solo dance performances on multiple themes.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">03:00 PM - 05:00 PM</div>
+          <div class="event-title">Battle of Bands</div>
+          <p class="event-desc">Rock the stage with electrifying music performances by college bands.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-divider">Day 3 – Valedictory</div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">10:00 AM - 12:00 PM</div>
+          <div class="event-title">Prize Distribution</div>
+          <p class="event-desc">Winners of different events will be awarded prizes and certificates.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">01:00 PM - 02:00 PM</div>
+          <div class="event-title">Cultural Show</div>
+          <p class="event-desc">Students showcase talents through singing, dancing, and skits.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="event-card">
+          <div class="event-time">02:30 PM - 03:30 PM</div>
+          <div class="event-title">Closing Ceremony</div>
+          <p class="event-desc">Vote of thanks, memories sharing, and announcement for next year’s fest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
