@@ -1,1 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>College Event Management</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- Top Header with Logo + College Name -->
+<div class="top-header text-white py-2 fixed-top" style="background-color: 	black;">
+
+  <div class="container d-flex align-items-center justify-content-center">
+    <!-- College Logo -->
+    <img src="logo_college.png" alt="College Logo" style="height:50px; margin-right: 15px;">
+    <!-- College Name -->
+    <h4 class="m-0 fw-bold">Dr Ram Manohar Lohia Avadh University, Ayodhya UP</h4>
+  </div>
+</div>
+
+<!-- Navbar (shifted below header) -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="top:60px; background-color: #5c3d39;">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">College Events</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <button class="register-btn">Register</button>
+    <!-- Search Form -->
+      <form class="d-flex me-auto" role="search">
+        <input class="form-control me-2 search-bar" type="search" placeholder="Search Events..." aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Search</button>
+      </form>
+
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#event">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      <li class="nav-item">
+  <a class="btn btn-outline-light ms-2" href="#login">Login</a>
+</li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Empty space right (keeps name centered) -->
+  <div style="width:50px;"></div>
+</div>
+<!-- Home Section -->
+<section id="home">
+  <!-- Hero Carousel -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active hero-slide" style="background-image: url(hackathon.jpg);">
+        <div class="hero-text text-center text-white">
+          <h1 class="display-4 fw-bold">Welcome to College Event Management</h1>
+          <p class="lead">Explore, Participate, and Manage all your College Events in one place!</p>
+          <a href="#event" class="btn btn-warning btn-lg mt-3">View Events</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item hero-slide" style="background-image: url('WhatsApp Image 2025-08-27 at 13.28.20_ef309e84.jpg');">
+        <div class="hero-text text-center text-white">
+          <h1 class="display-4 fw-bold">Discover Amazing Experiences</h1>
+          <p class="lead">Workshops, Lectures, Music Nights, and more!</p>
+          <a href="#event" class="btn btn-warning btn-lg mt-3">Join Now</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item hero-slide" style="background-image: url('hero\ image\ 3.jpg');">
+        <div class="hero-text text-center text-white">
+          <h1 class="display-4 fw-bold">Be Part of Something Big</h1>
+          <p class="lead">Showcase your talent and connect with the community!</p>
+          <a href="#event" class="btn btn-warning btn-lg mt-3">Get Started</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+
+<!-- Login Section -->
+<section class="vh-100 d-flex align-items-center">
+  <div class="container-fluid">
+    <div class="row">
+      
+      <!-- Left Side Image -->
+      <div class="col-md-6 d-none d-md-block p-0">
+        <div class="login-bg"></div>
+      </div>
+
+      <!-- Right Side Form -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="card shadow p-4 w-75">
+          <h3 class="text-center mb-4">Sign In</h3>
+          <form>
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <!-- Password -->
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <!-- Remember -->
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="remember">
+              <label class="form-check-label" for="remember">Remember Me</label>
+            </div>
+            <!-- Button -->
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+          <p class="text-center mt-3">
+            Don’t have an account? <a href="#">Sign Up</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- event section -->
+
+  <section id="event" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Event</h2>
+
+    <!-- First Row: 4 Events -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Workshop -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="workshop image.jpg" class="card-img-top" alt="Workshop">
+          <div class="card-body">
+            <h5 class="card-title">Workshop</h5>
+            <p class="card-text">Hands-on training sessions in AI, Robotics, Design and more.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guest Lecture -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="Guest lecture.jpg" class="card-img-top" alt="Guest Lecture">
+          <div class="card-body">
+            <h5 class="card-title">Guest Lecture</h5>
+            <p class="card-text">Experts and professors sharing valuable insights and experiences.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Startup Pitch -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="startup pitch image.jpg" class="card-img-top" alt="Startup Pitch">
+          <div class="card-body">
+            <h5 class="card-title">Startup Pitch</h5>
+            <p class="card-text">Showcase entrepreneurial ideas and compete for funding & mentorship.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music Night -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="music night.jpg" class="card-img-top" alt="Music Night">
+          <div class="card-body">
+            <h5 class="card-title">Music Night</h5>
+            <p class="card-text">An evening of soulful tunes, band performances and fun vibes.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row: 4 Events -->
+    <div class="row g-4 mt-2 justify-content-center">
+
+      <!-- Gaming Tournament -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="gaming turnament.jpg" class="card-img-top" alt="Gaming Tournament">
+          <div class="card-body">
+            <h5 class="card-title">Gaming Tournament</h5>
+            <p class="card-text">Compete in esports and LAN games for the ultimate gaming crown.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food Fest -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="food fest (2).jpg" class="card-img-top" alt="Food Fest">
+          <div class="card-body">
+            <h5 class="card-title">Food Fest</h5>
+            <p class="card-text">Taste a variety of cuisines and explore delicious food stalls.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alumni Meet -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="Alumni meet.jpg" class="card-img-top" alt="Alumni Meet">
+          <div class="card-body">
+            <h5 class="card-title">Alumni Meet</h5>
+            <p class="card-text">Reconnect with old classmates, share stories and network together.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Health Camp -->
+      <div class="col-md-3">
+        <div class="card shadow-sm h-100">
+          <img src="Health camp (1).jpg" class="card-img-top" alt="Health Camp">
+          <div class="card-body">
+            <h5 class="card-title">Health Camp</h5>
+            <p class="card-text">Free medical checkups and awareness programs for students & staff.</p>
+            <a href="#" class="btn btn-dark btn-sm">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Schedule Section --> 
+<section id="schedule" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Schedule</h2>
+
+    <!-- Events Carousel -->
+    <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 (First 4 Events) -->
+        <div class="carousel-item active">
+          <div class="row g-3">
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">09:00 AM - 11:00 AM</h6>
+                <h5>Workshop</h5>
+                <p>Hands-on training sessions in AI, Robotics, and Design.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">11:30 AM - 01:00 PM</h6>
+                <h5>Guest Lecture</h5>
+                <p>Experts and professors sharing valuable insights.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">02:00 PM - 04:00 PM</h6>
+                <h5>Startup Pitch</h5>
+                <p>Showcase entrepreneurial ideas and win mentorship.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">07:00 PM - 10:00 PM</h6>
+                <h5>Music Night</h5>
+                <p>An evening of soulful tunes and band performances.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slide 2 (Next 4 Events) -->
+        <div class="carousel-item">
+          <div class="row g-3">
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">10:00 AM - 01:00 PM</h6>
+                <h5>Gaming Tournament</h5>
+                <p>Compete in esports and LAN games for the crown.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">12:00 PM - 06:00 PM</h6>
+                <h5>Food Fest</h5>
+                <p>Taste a variety of cuisines and explore food stalls.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">05:00 PM - 09:00 PM</h6>
+                <h5>Alumni Meet</h5>
+                <p>Reconnect with classmates, share stories & network.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="event-box p-3 border rounded shadow-sm bg-white text-center">
+                <h6 class="text-primary fw-bold">09:00 AM - 02:00 PM</h6>
+                <h5>Health Camp</h5>
+                <p>Free medical checkups and awareness programs.</p>
+                <a href="#" class="btn btn-warning btn-sm mt-2">Join Now</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+.event-box {
+  background-image:url("background img.jpg");
+  border-radius: 12px;
+  padding: 15px;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease-in-out;
+}
+.event-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+</style>
+</p>
+  </div>
+</section>
+
+<!-- Live Events Section -->
+<section id="live-events" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">🔥 Live Events 🔥</h2>
+    <div class="row g-4">
+
+      <!-- Event 1 -->
+      <div class="col-md-4">
+        <div class="event-card position-relative overflow-hidden rounded shadow">
+          <img src="cultural event.jpg" class="img-fluid w-100 event-img" alt="Live Event 1">
+          <div class="event-overlay d-flex flex-column justify-content-center align-items-center">
+            <h4 class="text-white">Cultural Fest</h4>
+            <p class="text-white">Join the most exciting cultural night!</p>
+            <a href="#" class="btn btn-warning btn-sm">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="col-md-4">
+        <div class="event-card position-relative overflow-hidden rounded shadow">
+          <img src="robotics image.jpg" class="img-fluid w-100 event-img" alt="Live Event 2">
+          <div class="event-overlay d-flex flex-column justify-content-center align-items-center">
+            <h4 class="text-white">Tech Workshop</h4>
+            <p class="text-white">Learn AI, Robotics, and more!</p>
+            <a href="#" class="btn btn-warning btn-sm">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="col-md-4">
+        <div class="event-card position-relative overflow-hidden rounded shadow">
+          <img src="music feel.jpg" class="img-fluid w-100 event-img" alt="Live Event 3">
+          <div class="event-overlay d-flex flex-column justify-content-center align-items-center">
+            <h4 class="text-white">Music Night</h4>
+            <p class="text-white">Feel the vibes of live music!</p>
+            <a href="#" class="btn btn-warning btn-sm">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CSS for Hover Effect -->
+<style>
+  .event-card {
+  position: relative;
+  cursor: pointer;
+  height: 300px; /* sab boxes ki height fix */
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;      /* fix karega image ki height */
+  object-fit: cover; /* crop karke box me fit karega */
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-img {
+  transform: scale(1.1);
+}
+
+.event-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.event-card:hover .event-overlay {
+  opacity: 1;
+}
+
+    
+</style>
+
+
+
+<!-- Save as faculty-section.html -->
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<section id="faculty" class="faculty-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Event Management Faculty</h2>
+      <p>Meet the team organizing your college events</p>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper faculty-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Faculty 1 -->
+        <div class="swiper-slide">
+          <article class="faculty-card">
+            <div class="photo">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Prof. Anjali Sharma">
+            </div>
+            <div class="info">
+              <h3>Prof. Anjali Sharma</h3>
+              <p class="role">Head of Events</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Faculty 2 -->
+        <div class="swiper-slide">
+          <article class="faculty-card">
+            <div class="photo">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Rohit Verma">
+            </div>
+            <div class="info">
+              <h3>Dr. Rohit Verma</h3>
+              <p class="role">Workshops & Logistics</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Faculty 3 -->
+        <div class="swiper-slide">
+          <article class="faculty-card">
+            <div class="photo">
+              <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Ms. Priya Kapoor">
+            </div>
+            <div class="info">
+              <h3>Ms. Priya Kapoor</h3>
+              <p class="role">Sponsorship & Outreach</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Faculty 4 -->
+        <div class="swiper-slide">
+          <article class="faculty-card">
+            <div class="photo">
+              <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Mr. Sameer Khan">
+            </div>
+            <div class="info">
+              <h3>Mr. Sameer Khan</h3>
+              <p class="role">Student Coordinator</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Faculty 5 -->
+        <div class="swiper-slide">
+          <article class="faculty-card">
+            <div class="photo">
+              <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Dr. Neha Gupta">
+            </div>
+            <div class="info">
+              <h3>Dr. Neha Gupta</h3>
+              <p class="role">Cultural Head</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Faculty 6 -->
+        <div class="swiper-slide">
+          <article class="faculty-card">
+            <div class="photo">
+              <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="Prof. Rajesh Malhotra">
+            </div>
+            <div class="info">
+              <h3>Prof. Rajesh Malhotra</h3>
+              <p class="role">Technical Advisor</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".faculty-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    coverflowEffect: {
+      rotate: 40,
+      stretch: 0,
+      depth: 150,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+<style>
+/* Basic layout */
+.faculty-swiper {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.faculty-card {
+  padding: 16px;
+}
+
+.faculty-card .photo {
+  width: 100%;
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faculty-card .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.faculty-card .info h3 {
+  margin: 12px 0 4px;
+  font-size: 18px;
+}
+
+.faculty-card .info .role {
+  color: #0ea5a4;
+  font-size: 14px;
+}
+
+:root{
+  --bg:#0f1724;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0ea5a4;
+  --glass: rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+
+/* Section */
+.faculty-section{
+  padding:48px 20px;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  color: #0b1220;
+}
+.container{max-width:1100px;margin:0 auto}
+
+/* Header */
+.section-header{ text-align:center;margin-bottom:28px }
+.section-header h2{ font-size:28px;margin:0 0 6px;}
+.section-header p{ margin:0;color:var(--muted);font-size:14px }
+
+/* Grid */
+.faculty-grid{
+  display:grid;
+  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Card */
+.faculty-card{
+  background:var(--card);
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 0 6px 18px rgba(13, 24, 35, 0.08);
+  transition: transform .22s ease, box-shadow .22s ease;
+  border: 1px solid rgba(15,23,36,0.04);
+  min-height:380px;
+}
+
+.faculty-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 22px 40px rgba(2,6,23,0.12);
+}
+
+/* Photo */
+.photo{ width:100%; height:0; padding-bottom:66.6%; position:relative; overflow:hidden; background:var(--glass) }
+.photo img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  display:block;
+  transition: transform .6s ease;
+}
+.faculty-card:hover .photo img{ transform: scale(1.06); }
+
+/* Info */
+.info{ padding:18px 16px; display:flex; flex-direction:column; gap:8px; flex:1 }
+.info h3{ margin:0; font-size:18px; }
+.role{ margin:0; color:var(--accent); font-weight:600; font-size:13px }
+.bio{ margin:4px 0 0; color:var(--muted); font-size:13px; flex:1 }
+.meta{ display:flex; gap:12px; flex-wrap:wrap; color:#344054; font-size:13px }
+
+/* Responsive tweaks */
+@media (max-width:520px){
+  .section-header h2{ font-size:22px }
+  .faculty-card{ min-height:340px }
+}
+
+/* Utility: small avatar circle for future use */
+.avatar-sm{ width:40px;height:40px;border-radius:50%;overflow:hidden;display:inline-block }
+
+</style>
+
+<!-- About Us Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Side: Text -->
+      <div class="col-md-8">
+        <h2 class="mb-4">About Us</h2>
+        <p>
+          Welcome to <strong>College Event Management</strong> – your one-stop 
+          platform to explore, participate, and manage all college events with ease.  
+          Our mission is to bring students, faculty, and alumni together by making 
+          event planning, registration, and participation seamless.  
+        </p>
+        <p>
+          From cultural fests, workshops, and competitions to alumni meets and 
+          technical expos, we ensure that every student gets the opportunity to 
+          showcase talent, connect with peers, and create lasting memories.  
+        </p>
+        <p>
+          We believe in encouraging innovation, collaboration, and celebration by 
+          hosting events that inspire, entertain, and educate.  
+        </p>
+        <a href="#events" class="btn btn-primary mt-3">Explore Events</a>
+      </div>
+      
+      <!-- Right Side: Auto Changing Images -->
+      <div class="col-md-4 text-center">
+        <div class="image-slider">
+          <img src="about CEMS.jpg" class="img-fluid rounded shadow active">
+          <img src="about CEMS1.jpg" class="img-fluid rounded shadow">
+          <img src="about CEMS2.jpg" class="img-fluid rounded shadow">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+  .image-slider {
+    position: relative;
+    width: 100%;
+    height: 300px; /* set height */
+    overflow: hidden;
+  }
+  .image-slider img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .image-slider img.active {
+    opacity: 1;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  const images = document.querySelectorAll('.image-slider img');
+  let index = 0;
+
+  setInterval(() => {
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }, 3000); // change every 3 sec
+</script>
+
+
+<!-- Review & Rating Section -->
+<section class="reviews-section text-white py-5">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <h2 class="text-center mb-5 fw-bold"style="color:black">What Students Say</h2>
+    <div class="row g-4">
+      
+      <!-- Review 1 -->
+      <div class="col-md-4">
+        <div class="card bg-dark bg-opacity-75 border-0 shadow-lg text-center p-3">
+          <h5 class="fw-bold"style="color:white">Amit Kumar</h5>
+          <p class="small fst-italic"style="color:white">"Amazing cultural fest! Really enjoyed the performances and vibe."</p>
+          <!-- Rating stars -->
+          <div class="stars text-warning">
+            ★★★★☆
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="col-md-4">
+        <div class="card bg-dark bg-opacity-75 border-0 shadow-lg text-center p-3">
+          <h5 class="fw-bold"style="color:white">Priya Sharma</h5>
+          <p class="small fst-italic"style="color:white">"Tech Conference was well organized. Learned a lot!"</p>
+          <div class="stars text-warning">
+            ★★★★★
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="col-md-4">
+        <div class="card bg-dark bg-opacity-75 border-0 shadow-lg text-center p-3">
+          <h5 class="fw-bold"style="color:white">Rahul Singh</h5>
+          <p class="small fst-italic"style="color:white">"Great sports meet, so much energy and enthusiasm on campus."</p>
+          <div class="stars text-warning">
+            ★★★★☆
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Contact Us Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Section Heading -->
+      <div class="col-lg-8 text-center">
+        <h2 class="mb-4">Contact Us</h2>
+        <p class="mb-5">
+          Have questions, suggestions, or need event support?  
+          Reach out to us — we’d love to hear from you!  
+          Whether you’re a student, faculty member, or alumni, our team is here to help make your event experience smooth and enjoyable.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-7">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-dark px-4">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-5">
+        <div class="p-4 bg-white shadow rounded h-100">
+          <h5 class="mb-3">Get in Touch</h5>
+          <p><strong>Email:</strong> support@collegeevents.com</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Address:</strong> XYZ College, Main Campus, City, India</p>
+
+          <!-- Social Links -->
+          <div class="mt-3">
+            <a href="#" class="me-3 text-dark"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="me-3 text-dark"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="me-3 text-dark"><i class="bi bi-twitter fs-4"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-linkedin fs-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+       
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer text-white pt-5" style="background-color: rgb(65, 64, 64);">
+  <div class="container">
+    <div class="row">
+      
+      <!-- College Info -->
+      <div class="col-md-4 mb-4 text-center">
+        <img src="logo_college.png" alt="College Logo" height="60" class="mb-2">
+        <h5 class="fw-bold">Dr Ram Manohar Lohia Avadh University</h5>
+        <p class="small">Ayodhya, Uttar Pradesh</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">Events</a></li>
+          <li><a href="#" class="footer-link">Schedule</a></li>
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Connect With Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="text-center py-3 border-top border-light mt-3">
+      <p class="mb-0 small">© 2025 Dr Ram Manohar Lohia Avadh University | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
